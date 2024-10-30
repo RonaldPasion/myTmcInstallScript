@@ -48,7 +48,7 @@ if ($process.ExitCode -eq 0) {
 
     # Step 4: Import NetRunInit.reg into registry
     Write-Host "Importing NetRunInit.reg into registry..."
-    Start-Process -FilePath "reg" -ArgumentList "import `"$netRunPath\NetRunInit.reg`"" -Wait -NoNewWindow
+    Start-Process -FilePath "regedit.exe" -ArgumentList "import `"$netRunPath\NetRunInit.reg`"" -Wait -NoNewWindow
 
     # Step 5: Install MyTMC64.msi
     Write-Host "Installing MyTMC64.msi..."
